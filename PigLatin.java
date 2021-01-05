@@ -19,7 +19,7 @@ public class PigLatin{
   }
   public static String pigLatin(String s){
     s = s.toLowerCase();
-    
+
     String sss = "";
     String[] d = {"bl", "br", "ch", "ck", "cl", "cr", "dr", "fl", "fr", "gh", "gl", "gr", "ng", "ph", "pl", "pr", "qu", "sc", "sh", "sk", "sl", "sm", "sn", "sp", "st", "sw", "th", "tr", "tw", "wh", "wr"};
     int count = 0;
@@ -95,4 +95,46 @@ public class PigLatin{
 
 
   }
+  public static void foo(String fileName) throws FileNotFoundException{
+
+    Scanner in = new Scanner(new File(fileName));
+    while (in.hasNext()) {
+      String line = in.nextLine();
+      String add = "";
+      Scanner in2 = new Scanner(line);
+      while (in2.hasNext()) {
+
+        String word = in2.next();
+
+        Stringw word2 = PigLatinBest(word);
+
+          add = add + word2;
+
+
+          add = add + " ";
+      }
+      System.out.println(add);
+    }
+  }
+
+
+
+
+
+//hi
+
+
+
+
+  public static void main(String[]args){
+      String fileName = "sonnet.txt";
+      try{
+         foo(fileName);
+
+      }catch(FileNotFoundException e){
+        System.out.println("File not found: " + fileName);
+        System.exit(1);
+      }
+
+}
 }
