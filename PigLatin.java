@@ -41,4 +41,58 @@ public class PigLatin{
     }
 
   }
+  public static String pigLatinBest(String s){
+    s = s.toLowerCase();
+    String alpha;
+    String[] alpha = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+    int ccount = 0;
+    for (int i = 0; i != alpha.length; i++) {
+      if (s.substring(0,1).equals(alpha[i])) {
+
+      }
+      else {
+        ccount = ccount + 1;
+      }
+    }
+    if (ccount != 0) {
+      return s;
+    }
+    ccount = 0;
+    String ending = "";
+    for (int i = 0; i != alpha.length; i++) {
+      if (s.substring(s.length()-1,s.length()).equals(alpha[i])) {
+
+      }
+      else {
+        ccount = ccount + 1;
+      }
+    }
+    if (ccount != 0) {
+      ending = s.substring(s.length()-1,s.length());
+      s = s.substring(0,s.length()-1);
+    }
+    String[] d;
+    String sss = "";
+    String[] d = {"bl", "br", "ch", "ck", "cl", "cr", "dr", "fl", "fr", "gh", "gl", "gr", "ng", "ph", "pl", "pr", "qu", "sc", "sh", "sk", "sl", "sm", "sn", "sp", "st", "sw", "th", "tr", "tw", "wh", "wr"};
+    int count = 0;
+    int al = d.length;
+    for (int i = 0; i != al; i++) {
+      if (s.substring(0,2).equals(d[i])) {
+        sss = s.substring(2,s.length()) + s.substring(0,2) + "ay";
+        return sss+ ending;
+      }
+    }
+    if (s.substring(0,1).equals("a")|s.substring(0,1).equals("e")||s.substring(0,1).equals("i")||s.substring(0,1).equals("o")||s.substring(0,1).equals("u")) {
+      s = s + "hay";
+      return s + ending;
+    }
+    else {
+      String ss = "";
+      ss = s.substring(1,s.length()) + s.substring(0,1) +"ay";
+      return ss + ending;
+    }
+
+
+
+  }
 }
