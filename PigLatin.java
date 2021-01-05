@@ -70,7 +70,7 @@ public class PigLatin{
     ccount = 0;
     String ending = "";
     for (int i = 0; i != alpha.length; i++) {
-      if (s.substring(s.length()).equals(alpha[i])) {
+      if (s.substring(s.length()-1).equals(alpha[i])) {
         ccount = ccount + 1;
       }
       else {
@@ -78,8 +78,8 @@ public class PigLatin{
       }
     }
     if (ccount == 0) {
-      ending = s.substring(s.length());
-      s = s.substring(0,s.length());
+      ending = s.substring(s.length()-1);
+      s = s.substring(0,s.length()-1);
     }
 
 
@@ -118,46 +118,17 @@ public class PigLatin{
 
 
   }
-  public static void foo(String fileName) throws FileNotFoundException{
-
-    Scanner in = new Scanner(new File(fileName));
-    while (in.hasNext()) {
-      String line = in.nextLine();
-      String add = "";
-      Scanner in2 = new Scanner(line);
-      while (in2.hasNext()) {
-
-        String word = in2.next();
-
-        String word2 = pigLatin(word);
-
-          add = add + word2;
-
-
-          add = add + " ";
+  public static void main(String[] args){
+    Scanner n = new Scanner(System.in);
+    while(n.hasNext()){
+      Scanner line = new Scanner(n.nextLine());
+      while(line.hasNext()){
+        String s = line.next();
+        String temp = "";
+        temp += pigLatinBest(s);
+        System.out.print(temp + " ");
       }
-      System.out.println(add);
-    }
+      System.out.println();
   }
-
-
-
-
-
-//hi
-
-
-
-
-  public static void main(String[]args){
-      String fileName = "sonnet.txt";
-      try{
-         foo(fileName);
-
-      }catch(FileNotFoundException e){
-        System.out.println("File not found: " + fileName);
-        System.exit(1);
-      }
-
-}
+  }
 }
