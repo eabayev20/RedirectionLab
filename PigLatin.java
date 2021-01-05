@@ -30,6 +30,15 @@ public class PigLatin{
         return sss;
       }
     }
+    if (s.substring(0,1).equals("a")|s.substring(0,1).equals("e")||s.substring(0,1).equals("i")||s.substring(0,1).equals("o")||s.substring(0,1).equals("u")) {
+      s = s + "hay";
+      return s;
+    }
+    else {
+      String ss = "";
+      ss = s.substring(1,s.length()) + s.substring(0,1) +"ay";
+      return ss;
+    }
 
   }
 }
