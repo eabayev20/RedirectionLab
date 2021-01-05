@@ -5,7 +5,7 @@ public class PigLatin{
 
   public static String pigLatinSimple(String s){
     s = s.toLowerCase();
-    if (s[0].equals("a")||s[0].equals("e")||s[0].equals("i")||s[0].equals("o")||s[0].equals("u")) {
+    if (ss.substring(0,1).equals("a")|ss.substring(0,1).equals("e")||ss.substring(0,1).equals("i")||ss.substring(0,1).equals("o")||ss.substring(0,1).equals("u")) {
       s = s + "hay";
     }
     else {
