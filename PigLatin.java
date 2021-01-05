@@ -5,15 +5,21 @@ public class PigLatin{
 
   public static String pigLatinSimple(String s){
     s = s.toLowerCase();
-    if (ss.substring(0,1).equals("a")|ss.substring(0,1).equals("e")||ss.substring(0,1).equals("i")||ss.substring(0,1).equals("o")||ss.substring(0,1).equals("u")) {
+    if (s.substring(0,1).equals("a")|s.substring(0,1).equals("e")||s.substring(0,1).equals("i")||s.substring(0,1).equals("o")||s.substring(0,1).equals("u")) {
       s = s + "hay";
+      return s;
     }
     else {
       String ss = "";
-      ss = ss.substring(1,ss.length()) + ss.substring(0,1) +"ay";
-
+      ss = s.substring(1,s.length()) + s.substring(0,1) +"ay";
+      return ss;
     }
-    return s;
+
+
+  }
+  public static String pigLatin(String s){
+    s = s.toLowerCase();
+
 
   }
 }
