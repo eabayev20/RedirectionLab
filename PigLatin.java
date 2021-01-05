@@ -19,7 +19,7 @@ public class PigLatin{
   }
   public static String pigLatin(String s){
     s = s.toLowerCase();
-    String[] d;
+    
     String sss = "";
     String[] d = {"bl", "br", "ch", "ck", "cl", "cr", "dr", "fl", "fr", "gh", "gl", "gr", "ng", "ph", "pl", "pr", "qu", "sc", "sh", "sk", "sl", "sm", "sn", "sp", "st", "sw", "th", "tr", "tw", "wh", "wr"};
     int count = 0;
@@ -43,7 +43,7 @@ public class PigLatin{
   }
   public static String pigLatinBest(String s){
     s = s.toLowerCase();
-    String alpha;
+
     String[] alpha = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
     int ccount = 0;
     for (int i = 0; i != alpha.length; i++) {
@@ -71,7 +71,7 @@ public class PigLatin{
       ending = s.substring(s.length()-1,s.length());
       s = s.substring(0,s.length()-1);
     }
-    String[] d;
+
     String sss = "";
     String[] d = {"bl", "br", "ch", "ck", "cl", "cr", "dr", "fl", "fr", "gh", "gl", "gr", "ng", "ph", "pl", "pr", "qu", "sc", "sh", "sk", "sl", "sm", "sn", "sp", "st", "sw", "th", "tr", "tw", "wh", "wr"};
     int count = 0;
