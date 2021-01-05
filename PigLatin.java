@@ -106,7 +106,7 @@ public class PigLatin{
 
         String word = in2.next();
 
-        Stringw word2 = PigLatinBest(word);
+        String word2 = pigLatinBest(word);
 
           add = add + word2;
 
